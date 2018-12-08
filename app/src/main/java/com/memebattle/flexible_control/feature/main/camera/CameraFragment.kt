@@ -25,7 +25,6 @@ class CameraFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
         takePhoto()
         return inflater.inflate(R.layout.fragment_camera, container, false)
     }
