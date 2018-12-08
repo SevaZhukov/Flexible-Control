@@ -2,6 +2,8 @@ package com.memebattle.flexible_control.core.di.module
 
 import com.memebattle.flexible_control.feature.auth.data.AuthApi
 import com.memebattle.flexible_control.feature.auth.domain.ApiAuthService
+import com.memebattle.flexible_control.feature.report.data.ReportApi
+import com.memebattle.flexible_control.feature.report.domain.ApiReportService
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -25,5 +27,12 @@ class ApiModule {
     fun providesAuthService(retrofit: Retrofit): ApiAuthService {
         val authApi = retrofit.create(AuthApi::class.java)
         return ApiAuthService(authApi)
+    }
+
+    @Provides
+    @Singleton
+    fun providesReportService(retrofit: Retrofit): ApiReportService {
+        val reportApi = retrofit.create(ReportApi::class.java)
+        return ApiReportService(reportApi)
     }
 }
