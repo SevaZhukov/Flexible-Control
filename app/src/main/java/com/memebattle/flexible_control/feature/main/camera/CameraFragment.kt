@@ -39,7 +39,7 @@ class CameraFragment : Fragment() {
         intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri)
         startActivityForResult(intent, TAKE_PICTURE_REQUEST)
     }
-
+   
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
