@@ -8,6 +8,6 @@ import retrofit2.http.POST
 
 
 interface AuthApi {
-    @POST("")
+    @POST("/")
     fun signIn(@Body req: AuthRequest): Call<AuthResponse>
 }

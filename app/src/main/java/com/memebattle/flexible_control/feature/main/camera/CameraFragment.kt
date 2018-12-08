@@ -14,6 +14,7 @@ import android.view.ViewGroup
 import com.memebattle.flexible_control.R
 import android.net.Uri
 import android.os.Environment
+import org.jetbrains.anko.design.snackbar
 import java.io.File
 import java.util.*
 
@@ -21,11 +22,14 @@ import java.util.*
 class CameraFragment : Fragment() {
     private val TAKE_PICTURE_REQUEST = 1
     private lateinit var outputFileUri: Uri
+    private lateinit var rootView:View
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         takePhoto()
-        return inflater.inflate(R.layout.fragment_camera, container, false)
+        rootView = inflater.inflate(R.layout.fragment_camera, container, false)
+        return rootView
+
     }
     fun takePhoto(){
 
@@ -41,7 +45,7 @@ class CameraFragment : Fragment() {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == TAKE_PICTURE_REQUEST && resultCode == RESULT_OK) {
-
+            rootView.snackbar("Фотография загружена")
         }
     }
 }
