@@ -18,7 +18,8 @@ class ApiAuthService(val authApi: AuthApi) {
                     }
 
                     override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
-                        callback.onSuccess(response.body()!!)
+                        if (response.body() != null)
+                            callback.onSuccess(response.body()!!)
                     }
                 })
     }

@@ -15,7 +15,7 @@ class ApiModule {
     @Singleton
     fun providesRetrofit(): Retrofit {
         return Retrofit.Builder()
-                .baseUrl("")
+                .baseUrl("https://www.google.ru/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
     }
