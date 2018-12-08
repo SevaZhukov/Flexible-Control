@@ -36,6 +36,10 @@ dependencies {
     //here
     compile files('libs/HERE-sdk.aar')
 
+    //viewmodel
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0-beta01'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0'
+
     //navigation
     implementation 'android.arch.navigation:navigation-fragment:1.0.0-alpha07'
     implementation 'android.arch.navigation:navigation-ui:1.0.0-alpha07'
@@ -53,4 +57,11 @@ dependencies {
     //retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+    //runtime permission
+    implementation 'com.karumi:dexter:5.0.0'
+
+    //anko
+    implementation "org.jetbrains.anko:anko:0.10.8"
+    implementation "org.jetbrains.anko:anko-design:0.10.8"
 }
