@@ -1,4 +1,4 @@
-package com.memebattle.flexible_control.feature.main.tasks
+package com.memebattle.flexible_control.feature.main.task_list
 
 
 import android.os.Bundle
@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import com.memebattle.flexible_control.R
 
 
-class TasksFragment : Fragment() {
+class TaskListFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {

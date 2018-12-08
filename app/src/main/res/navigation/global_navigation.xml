@@ -14,10 +14,18 @@
             android:id="@+id/action_authFragment_to_mainFragment"
             app:clearTask="true"
             app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_authFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.memebattle.flexible_control.feature.main.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.memebattle.flexible_control.feature.main.camera.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera" />
 </navigation>

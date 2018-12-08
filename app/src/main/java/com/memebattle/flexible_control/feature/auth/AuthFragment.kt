@@ -20,7 +20,7 @@ class AuthFragment : Fragment() {
         val v = inflater.inflate(R.layout.fragment_auth, container, false)
         navController = Navigation.findNavController(activity!!, R.id.nav_host_global)
         v.button.setOnClickListener {
-            navController.navigate(R.id.action_authFragment_to_mainFragment)
+            navController.navigate(R.id.action_authFragment_to_cameraFragment)
         }
         return v
     }
