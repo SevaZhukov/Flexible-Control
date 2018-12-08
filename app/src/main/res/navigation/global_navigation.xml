@@ -7,12 +7,17 @@
 
     <fragment
         android:id="@+id/authFragment"
-        android:name="com.memebattle.flexible_control.AuthFragment"
+        android:name="com.memebattle.flexible_control.feature.auth.AuthFragment"
         android:label="fragment_auth"
-        tools:layout="@layout/fragment_auth" />
+        tools:layout="@layout/fragment_auth" >
+        <action
+            android:id="@+id/action_authFragment_to_mainFragment"
+            app:clearTask="true"
+            app:destination="@id/mainFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.memebattle.flexible_control.MainFragment"
+        android:name="com.memebattle.flexible_control.feature.main.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" />
 </navigation>
