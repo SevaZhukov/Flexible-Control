@@ -26,4 +26,11 @@ class ApiModule {
         val authApi = retrofit.create(AuthApi::class.java)
         return ApiAuthService(authApi)
     }
+
+    @Provides
+    @Singleton
+    fun providesTaskListService(retrofit: Retrofit): ApiAuthService {
+        val authApi = retrofit.create(AuthApi::class.java)
+        return ApiAuthService(authApi)
+    }
 }
