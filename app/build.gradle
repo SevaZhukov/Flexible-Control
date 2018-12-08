@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -26,14 +28,29 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
+    implementation 'androidx.core:core-ktx:1.0.1'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
+    implementation 'com.google.android.material:material:1.0.0'
+
+    //here
+    compile files('libs/HERE-sdk.aar')
+
+    //navigation
     implementation 'android.arch.navigation:navigation-fragment:1.0.0-alpha07'
     implementation 'android.arch.navigation:navigation-ui:1.0.0-alpha07'
     implementation 'android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha07'
     implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0-alpha07'
-    implementation 'androidx.core:core-ktx:1.0.1'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
-    compile files('libs/HERE-sdk.aar')
-    implementation 'com.google.android.material:material:1.0.0'
+    //dagger2
+    implementation 'com.google.dagger:dagger:2.15'
+    kapt "com.google.dagger:dagger-compiler:2.13"
+
+    //room
+    implementation 'androidx.room:room-runtime:2.1.0-alpha03'
+    kapt 'androidx.room:room-compiler:2.1.0-alpha03'
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
 }
