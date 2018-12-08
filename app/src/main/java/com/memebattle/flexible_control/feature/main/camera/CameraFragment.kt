@@ -20,7 +20,6 @@ import java.util.*
 
 
 class CameraFragment : Fragment() {
-    private val CAMERA_REQUEST = 0
     private val TAKE_PICTURE_REQUEST = 1
     private lateinit var outputFileUri: Uri
 
@@ -39,7 +38,7 @@ class CameraFragment : Fragment() {
         intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri)
         startActivityForResult(intent, TAKE_PICTURE_REQUEST)
     }
-   
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
