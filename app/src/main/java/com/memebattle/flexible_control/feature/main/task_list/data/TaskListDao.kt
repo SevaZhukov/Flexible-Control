@@ -1,12 +1,14 @@
-package com.memebattle.flexible_control.feature.main.task_list.domain
+package com.memebattle.flexible_control.feature.main.task_list.data
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
+import com.memebattle.flexible_control.feature.main.task_list.domain.model.Task
+import rx.Single
 
 @Dao
-interface TaskDao {
+interface TaskListDao {
     @Insert
     fun addTasks(tasks: List<Task>)
 
@@ -17,5 +19,5 @@ interface TaskDao {
     fun deleteAll()
 
     @Query("SELECT * FROM task")
-    fun getTasks(): List<Task>
+    fun getTasks(): Single<List<Task>>
 }

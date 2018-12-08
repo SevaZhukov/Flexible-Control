@@ -31,6 +31,7 @@ class CameraFragment : Fragment() {
         return rootView
 
     }
+
     fun takePhoto(){
 
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
@@ -43,6 +44,7 @@ class CameraFragment : Fragment() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+     
 
         if (requestCode == TAKE_PICTURE_REQUEST && resultCode == RESULT_OK) {
             rootView.snackbar("Фотография загружена")
