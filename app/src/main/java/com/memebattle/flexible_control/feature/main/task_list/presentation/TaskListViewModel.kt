@@ -17,7 +17,6 @@ class TaskListViewModel: ViewModel() {
             override fun onSuccess(result: List<Task>) {
                 tasks.value = result
             }
-
             override fun onError(error: Throwable) {
                 errorMessage.value = error.message
             }

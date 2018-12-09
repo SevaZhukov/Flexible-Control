@@ -7,6 +7,7 @@ import com.memebattle.flexible_control.feature.MainActivity
 import com.memebattle.flexible_control.feature.auth.presentation.AuthViewModel
 import com.memebattle.flexible_control.feature.main.map.presentation.MapTaskFragment
 import com.memebattle.flexible_control.feature.main.task_list.domain.TaskListRepository
+import com.memebattle.flexible_control.feature.main.task_list.presentation.recycler.TaskListAdapter
 import com.memebattle.flexible_control.feature.report.presentation.ReportViewModel
 import dagger.Component
 import javax.inject.Singleton
@@ -18,5 +19,5 @@ interface AppComponent {
     fun inject(authViewModel: TaskListRepository)
     fun inject(reportViewModel: ReportViewModel)
     fun inject(mainActivity: MainActivity)
-    fun inject(mapTaskFragment: MapTaskFragment)
+    fun inject(taskListAdapter: TaskListAdapter)
 }
