@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.memebattle.flexible_control.feature.main.task_list.domain.model.Task
 import com.memebattle.flexible_control.R
+import kotlinx.android.synthetic.main.item_task.view.*
 
 
 class TaskListAdapter(val tasks: List<Task>): RecyclerView.Adapter<TaskViewHolder>() {
@@ -21,5 +22,7 @@ class TaskListAdapter(val tasks: List<Task>): RecyclerView.Adapter<TaskViewHolde
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
         val task = tasks[position]
         //TODO draw item
+        val itemview = holder.itemView
+        itemview.textView.text = task.id
     }
 }

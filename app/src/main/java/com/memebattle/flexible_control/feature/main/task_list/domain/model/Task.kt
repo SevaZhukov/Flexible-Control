@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class Task(var id: String) {
+data class Task(var name: String) {
     @PrimaryKey
-    lateinit var idKey: String
+    lateinit var id: String
 }
