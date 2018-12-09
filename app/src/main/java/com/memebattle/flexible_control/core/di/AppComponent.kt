@@ -15,4 +15,5 @@ interface AppComponent {
     fun inject(authViewModel: AuthViewModel)
     fun inject(authViewModel: TaskListRepository)
     fun inject(reportViewModel: ReportViewModel)
+    //fun injectWeather() для погоды
 }
