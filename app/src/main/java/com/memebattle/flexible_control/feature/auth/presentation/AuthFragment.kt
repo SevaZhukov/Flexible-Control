@@ -28,16 +28,16 @@ class AuthFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(AuthViewModel::class.java)
         navController = Navigation.findNavController(activity!!, R.id.nav_host_global)
         //navController.navigate(R.id.action_authFragment_to_reportFragment)
-        v.button.setOnClickListener {
+        /*v.button.setOnClickListener {
             navController.navigate(R.id.action_authFragment_to_mainFragment)
-        }
-        viewModel.signIn("+79529097158", "qwqweqwe")
+        }*/
+        viewModel.signIn("+79529097158", "qwqweqw")
         viewModel.user.observe(this, Observer {
             navController.navigate(R.id.action_authFragment_to_mainFragment)
         })
         viewModel.errorMessage.observe(this, Observer {
             Log.i("code", it)
-            v.snackbar(it)
+            v.rootView.snackbar(it)
         })
         return v
     }

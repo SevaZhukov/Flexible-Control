@@ -4,8 +4,10 @@
     package="com.memebattle.flexible_control">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
     <application
         android:name=".App"
@@ -23,13 +25,14 @@
             android:name="com.here.android.maps.apptoken"
             android:value="xPdfiEpA7yKr_tDpWbzJjw" />
 
-        <activity android:name=".feature.MainActivity">
+        <activity android:name=".feature.MapActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".feature.MainActivity"/>
     </application>
 
 </manifest>
