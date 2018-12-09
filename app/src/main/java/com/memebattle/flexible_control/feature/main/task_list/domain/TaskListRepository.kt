@@ -2,6 +2,7 @@ package com.memebattle.flexible_control.feature.main.task_list.domain
 
 import com.memebattle.flexible_control.App
 import com.memebattle.flexible_control.core.domain.BaseCallback
+import com.memebattle.flexible_control.core.domain.SettingsService
 import com.memebattle.flexible_control.feature.main.task_list.domain.interactor.ApiTaskListService
 import com.memebattle.flexible_control.feature.main.task_list.domain.interactor.RoomTaskListService
 import com.memebattle.flexible_control.feature.main.task_list.domain.model.Task
@@ -14,6 +15,8 @@ class TaskListRepository {
     lateinit var apiService: ApiTaskListService
     @Inject
     lateinit var roomService: RoomTaskListService
+    @Inject
+    lateinit var settingsService: SettingsService
 
     init {
         App.component.inject(this)
