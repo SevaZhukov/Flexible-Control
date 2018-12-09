@@ -27,6 +27,7 @@ class AuthFragment : Fragment() {
         val v = inflater.inflate(R.layout.fragment_auth, container, false)
         viewModel = ViewModelProviders.of(this).get(AuthViewModel::class.java)
         navController = Navigation.findNavController(activity!!, R.id.nav_host_global)
+
         v.authButton.setOnClickListener {
             //viewModel.signIn("+79529097158", "qwqweqw")
             viewModel.signIn(v.phone.text.toString(), v.password.text.toString())

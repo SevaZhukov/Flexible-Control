@@ -12,6 +12,9 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-feature android:name="android.hardware.camera"
         android:required="true" />
+    <uses-feature android:name="android.hardware.location" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:name=".App"
@@ -40,6 +43,7 @@
             android:name="com.here.android.maps.apptoken"
             android:value="xPdfiEpA7yKr_tDpWbzJjw" />
 
+        <activity android:name=".feature.MapActivity"/>
         <activity android:name=".feature.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,7 +51,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".feature.MapActivity"/>
+
     </application>
 
 </manifest>
