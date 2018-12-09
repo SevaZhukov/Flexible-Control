@@ -1,5 +1,6 @@
 package com.memebattle.flexible_control.feature.auth.domain
 
+import android.util.Log
 import com.memebattle.flexible_control.core.domain.BaseCallback
 import com.memebattle.flexible_control.feature.auth.data.AuthApi
 import com.memebattle.flexible_control.feature.auth.domain.model.AuthRequest
@@ -18,6 +19,7 @@ class ApiAuthService(val authApi: AuthApi) {
                     }
 
                     override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
+                        Log.i("code", response.code().toString())
                         if (response.body() != null)
                             callback.onSuccess(response.body()!!)
                     }
