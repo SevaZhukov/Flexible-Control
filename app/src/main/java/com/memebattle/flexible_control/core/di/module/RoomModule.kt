@@ -14,7 +14,7 @@ class RoomModule(val context: Context) {
 
     @Provides
     @Singleton
-    fun provideAppDatabase(context: Context): AppDatabase {
+    fun provideAppDatabase(): AppDatabase {
         return Room.databaseBuilder(context, AppDatabase::class.java, "database").build()
     }
 

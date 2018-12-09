@@ -1,4 +1,4 @@
-package com.memebattle.flexible_control.feature.report
+package com.memebattle.flexible_control.feature.report.presentation
 
 import android.net.Uri
 import androidx.lifecycle.ViewModel;

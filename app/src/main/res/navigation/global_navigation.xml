@@ -34,7 +34,7 @@
         tools:layout="@layout/fragment_task" />
     <fragment
         android:id="@+id/reportFragment"
-        android:name="com.memebattle.flexible_control.feature.report.ReportFragment"
+        android:name="com.memebattle.flexible_control.feature.report.presentation.ReportFragment"
         android:label="report_fragment"
         tools:layout="@layout/report_fragment" />
 </navigation>

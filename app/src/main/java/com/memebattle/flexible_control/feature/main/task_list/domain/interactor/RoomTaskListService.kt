@@ -3,10 +3,10 @@ package com.memebattle.flexible_control.feature.main.task_list.domain.interactor
 import com.memebattle.flexible_control.core.domain.BaseCallback
 import com.memebattle.flexible_control.feature.main.task_list.data.TaskListDao
 import com.memebattle.flexible_control.feature.main.task_list.domain.model.Task
-import org.jetbrains.anko.custom.async
-import rx.Observable
-import rx.android.schedulers.AndroidSchedulers
-import rx.schedulers.Schedulers
+import io.reactivex.Observable
+import io.reactivex.ObservableOnSubscribe
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
 
 class RoomTaskListService(val dao: TaskListDao) {
     fun getTasks(callback: BaseCallback<List<Task>>) {
@@ -17,24 +17,23 @@ class RoomTaskListService(val dao: TaskListDao) {
     }
 
     fun addTasks(tasks: List<Task>) {
-        Observable.create(Observable.OnSubscribe<String> { subscriber ->
+        Observable.create(ObservableOnSubscribe<String> { subscriber ->
             dao.addTasks(tasks)
-            subscriber.onCompleted()
-
+            subscriber.onComplete()
         })
-                .subscribeOn(rx.schedulers.Schedulers.io())
-                .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ }, { })
     }
 
     fun deleteTasks() {
-        Observable.create(Observable.OnSubscribe<String> { subscriber ->
+        Observable.create(ObservableOnSubscribe<String> { subscriber ->
             dao.deleteAll()
-            subscriber.onCompleted()
+            subscriber.onComplete()
 
         })
-                .subscribeOn(rx.schedulers.Schedulers.io())
-                .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ }, { })
     }
 }

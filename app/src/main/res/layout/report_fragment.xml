@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".feature.report.ReportFragment">
+    tools:context=".feature.report.presentation.ReportFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="350dp"

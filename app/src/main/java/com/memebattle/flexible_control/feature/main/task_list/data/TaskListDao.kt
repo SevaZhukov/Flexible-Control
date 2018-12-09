@@ -5,7 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import com.memebattle.flexible_control.feature.main.task_list.domain.model.Task
-import rx.Single
+import io.reactivex.Single
 
 @Dao
 interface TaskListDao {
