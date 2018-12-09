@@ -6,6 +6,6 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface TaskListApi {
-    @GET("/tasks/{id}")
-    fun getTasks(@Path("id") id: String): Call<TaskList>
+    @GET("/tasks")
+    fun getTasks(): Call<TaskList>
 }

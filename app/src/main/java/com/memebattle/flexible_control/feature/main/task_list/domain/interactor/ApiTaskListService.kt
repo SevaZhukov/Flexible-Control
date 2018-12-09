@@ -12,7 +12,7 @@ import retrofit2.Response
 
 class ApiTaskListService(val taskListApi: TaskListApi) {
     fun getTasks(callback: BaseCallback<TaskList>) {
-        taskListApi.getTasks("")
+        taskListApi.getTasks()
                 .enqueue(object : Callback<TaskList> {
                     override fun onFailure(call: Call<TaskList>, t: Throwable) {
                         callback.onError(t)

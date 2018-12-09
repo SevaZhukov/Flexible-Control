@@ -25,14 +25,14 @@
             android:name="com.here.android.maps.apptoken"
             android:value="xPdfiEpA7yKr_tDpWbzJjw" />
 
-        <activity android:name=".feature.MapActivity">
+        <activity android:name=".feature.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".feature.MainActivity"/>
+        <activity android:name=".feature.MapActivity"/>
     </application>
 
 </manifest>

@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation
 import com.memebattle.flexible_control.R
 import com.memebattle.flexible_control.feature.main.task_list.presentation.recycler.TaskListAdapter
 import kotlinx.android.synthetic.main.fragment_tasks.view.*
@@ -25,7 +26,7 @@ class TaskListFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(TaskListViewModel::class.java)
         v.recycler.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(activity!!)
         viewModel.tasks.observe(this, Observer {
-            v.recycler.adapter = TaskListAdapter(it)
+            v.recycler.adapter = TaskListAdapter(it, Navigation.findNavController(activity!!, R.id.nav_host_global))
         })
         viewModel.errorMessage.observe(this, Observer {
             Log.i("code", it)
