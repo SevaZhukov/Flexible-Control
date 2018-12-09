@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Users/lukia/Desktop/android-studio/plugins/android/lib/android.jar!/images/material_design_icons/content/ic_add_circle_outline_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/home/seva/android-studio-canary/plugins/android/lib/android.jar!/images/material_design_icons/maps/ic_place_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,8 +28,10 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_add_circle_outline_black_24dp" />
-                            <entry key="sourceFile" value="C:\Users\lukia" />
+                            <entry key="color" value="ff0e13" />
+                            <entry key="outputName" value="ic_place_black_24dp" />
+                            <entry key="overrideSize" value="true" />
+                            <entry key="sourceFile" value="$APPLICATION_HOME_DIR$/bin/C:\Users\lukia" />
                           </map>
                         </option>
                       </PersistentState>

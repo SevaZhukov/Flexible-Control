@@ -1,5 +1,6 @@
 package com.memebattle.flexible_control.feature.main.task_list.presentation.recycler
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.NavController
@@ -24,9 +25,12 @@ class TaskListAdapter(val tasks: List<Task>, val navController: NavController): 
         val task = tasks[position]
         //TODO draw item
         val itemview = holder.itemView
-        itemview.textView.text = task.name
+        itemview.title.text = task.name
+        itemview.text.text = task.description
         itemview.setOnClickListener {
-            navController.navigate(R.id.taskFragment)
+            val bundle = Bundle()
+            bundle.putString("id", task._id)
+            navController.navigate(R.id.reportFragment, bundle)
         }
     }
 }
