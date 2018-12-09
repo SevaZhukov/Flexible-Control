@@ -16,13 +16,12 @@
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
-        android:id="@+id/mapFragment"
-        android:name="com.memebattle.flexible_control.feature.main.map.presentation.MapTaskFragment"
-        android:label="fragment_map"
-        tools:layout="@layout/fragment_map" />
-    <fragment
         android:id="@+id/tasksFragment"
         android:name="com.memebattle.flexible_control.feature.main.task_list.presentation.TaskListFragment"
         android:label="fragment_tasks"
         tools:layout="@layout/fragment_tasks" />
+    <activity
+        android:id="@+id/mapFragment"
+        android:name="com.memebattle.flexible_control.feature.MapActivity"
+        android:label="MapActivity" />
 </navigation>

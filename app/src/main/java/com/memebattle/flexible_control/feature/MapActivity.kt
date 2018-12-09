@@ -25,7 +25,7 @@ class MapActivity : AppCompatActivity() {
             if (error == OnEngineInitListener.Error.NONE) {
                 val map = mapFragment.map
                 val myImage = com.here.android.mpa.common.Image()
-                myImage.setImageResource(R.drawable.abc_ic_star_black_36dp)
+                myImage.setImageResource(R.drawable.aaaaaaaaaa)
                 val mapMarker1 = MapMarker(GeoCoordinate(55.7627, 37.6057, 10.0), myImage)
                 val mapMarker2 = MapMarker(GeoCoordinate(55.7648, 37.6059, 10.0), myImage)
                 val mapMarker3 = MapMarker(GeoCoordinate(55.7629, 37.6034, 10.0), myImage)

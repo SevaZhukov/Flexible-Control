@@ -21,7 +21,7 @@ class ApiModule {
     @Singleton
     fun providesRetrofit(): Retrofit {
         return Retrofit.Builder()
-                .baseUrl("https://c7a0cf76.ngrok.io/")
+                .baseUrl("https://4906a778.ngrok.io/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
     }
