@@ -2,7 +2,7 @@ package com.memebattle.flexible_control.feature.weather.domain.model
 
 // result generated from /json
 
-data class WeatherRequest(val observations: Observations?)
+data class WeatherResponse(val observations: Observations?)
 
 data class Location(val observation: List<Observation>?, val country: String?, val state: String?, val city: String?, val latitude: Number?, val longitude: Number?, val distance: Number?, val timezone: Number?)
 
