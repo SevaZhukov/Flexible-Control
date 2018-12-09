@@ -14,9 +14,10 @@
             android:id="@+id/action_authFragment_to_mainFragment"
             app:clearTask="true"
             app:destination="@id/mainFragment" />
+     
         <action
-            android:id="@+id/action_authFragment_to_mapTaskFragment"
-            app:destination="@id/mapTaskFragment" />
+            android:id="@+id/action_authFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
@@ -32,9 +33,10 @@
         android:name="com.memebattle.flexible_control.feature.main.task.TaskFragment"
         android:label="fragment_task"
         tools:layout="@layout/fragment_task" />
+
     <fragment
-        android:id="@+id/mapTaskFragment"
-        android:name="com.memebattle.flexible_control.feature.main.map.presentation.MapTaskFragment"
-        android:label="fragment_map_task"
-        tools:layout="@layout/fragment_map" />
+        android:id="@+id/reportFragment"
+        android:name="com.memebattle.flexible_control.feature.report.presentation.ReportFragment"
+        android:label="report_fragment"
+        tools:layout="@layout/report_fragment" />
 </navigation>
