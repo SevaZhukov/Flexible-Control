@@ -2,15 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/profileFragment"
-        android:title="@string/title_profile" />
-    <item
         android:id="@+id/tasksFragment"
-        android:title="@string/title_tasks" />
+        android:title="@string/title_tasks"
+        android:icon="@drawable/menu1"/>
+    <item
+        android:id="@+id/profileFragment"
+        android:title="@string/title_profile"
+        android:icon="@drawable/us"/>
     <item
         android:id="@+id/mapFragment"
+        android:icon="@drawable/map"
         android:title="@string/title_map" />
     <item
         android:id="@+id/settingsFragment"
-        android:title="@string/title_settings" />
+        android:title="@string/title_settings"
+        android:icon="@drawable/set"/>
 </menu>
