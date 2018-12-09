@@ -21,15 +21,15 @@
 
         <com.memebattle.flexible_control.core.presentation.TextViewFlex
             android:id="@+id/textView4"
-            android:layout_marginTop="25dp"
-            app:customFont="@string/bold_font"
-            android:textColor="@color/colorPrimary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Фамилия Имя Отчество"
+            android:layout_marginTop="25dp"
+            android:text="Зубенко Михаил Петрович"
             android:textAlignment="center"
-            android:textSize="24sp" />
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            app:customFont="@string/bold_font" />
 
         <com.memebattle.flexible_control.core.presentation.TextViewFlex
             android:id="@+id/textView5"
