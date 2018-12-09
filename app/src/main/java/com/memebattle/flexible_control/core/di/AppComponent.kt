@@ -5,6 +5,7 @@ import com.memebattle.flexible_control.core.di.module.RoomModule
 import com.memebattle.flexible_control.core.di.module.SharedPreferencesModule
 import com.memebattle.flexible_control.feature.MainActivity
 import com.memebattle.flexible_control.feature.auth.presentation.AuthViewModel
+import com.memebattle.flexible_control.feature.main.map.presentation.MapTaskFragment
 import com.memebattle.flexible_control.feature.main.task_list.domain.TaskListRepository
 import com.memebattle.flexible_control.feature.report.presentation.ReportViewModel
 import dagger.Component
@@ -17,4 +18,5 @@ interface AppComponent {
     fun inject(authViewModel: TaskListRepository)
     fun inject(reportViewModel: ReportViewModel)
     fun inject(mainActivity: MainActivity)
+    fun inject(mapTaskFragment: MapTaskFragment)
 }
