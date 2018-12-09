@@ -20,11 +20,11 @@ class SettingsFragment : Fragment() {
         val v = inflater.inflate(R.layout.fragment_settings, container, false)
 
         var listRateModel = arrayListOf<RateModel>()
-        listRateModel.add(RateModel("ffff","fffffff"))
-        listRateModel.add(RateModel("ffff","fffffff"))
-        listRateModel.add(RateModel("ffff","fffffff"))
-        listRateModel.add(RateModel("ffff","fffffff"))
-        listRateModel.add(RateModel("ffff","fffffff"))
+        listRateModel.add(RateModel("Зубенко Михаил Петрович","250"))
+        listRateModel.add(RateModel("Иван Иванович Борисов","230"))
+        listRateModel.add(RateModel("Владимир Ильич Морозов","215"))
+        listRateModel.add(RateModel("Иван Петрович Онегин","205"))
+        listRateModel.add(RateModel("Генадий Борисович Князев","197"))
 
         // Inflate the layout for this fragment
         v.recycler1.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(activity!!)
