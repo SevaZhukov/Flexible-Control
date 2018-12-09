@@ -16,6 +16,8 @@
 
         <com.memebattle.flexible_control.core.presentation.TextViewFlex
             android:id="@+id/text"
+            android:maxLines = "3"
+            android:ellipsize="end"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
