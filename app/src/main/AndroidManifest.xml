@@ -18,6 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+
         <meta-data
             android:name="com.here.android.maps.appid"
             android:value="XMZ66PcCJqcKaYV5TQAu" />

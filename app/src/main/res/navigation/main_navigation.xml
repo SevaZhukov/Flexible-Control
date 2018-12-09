@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/mapFragment"
-        android:name="com.memebattle.flexible_control.feature.main.map.MapFragment"
+        android:name="com.memebattle.flexible_control.feature.main.map.presentation.MapFragment"
         android:label="fragment_map"
         tools:layout="@layout/fragment_map" />
     <fragment

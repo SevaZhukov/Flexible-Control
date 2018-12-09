@@ -6,6 +6,8 @@ import com.memebattle.flexible_control.feature.main.task_list.data.TaskListApi
 import com.memebattle.flexible_control.feature.main.task_list.domain.interactor.ApiTaskListService
 import com.memebattle.flexible_control.feature.report.data.ReportApi
 import com.memebattle.flexible_control.feature.report.domain.ApiReportService
+import com.memebattle.flexible_control.feature.report.domain.ApiWeatherService
+import com.memebattle.flexible_control.feature.weather.data.WeatherApi
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -33,6 +35,8 @@ class ApiModule {
 
     @Provides
     @Singleton
+
+
     fun providesTaskListService(retrofit: Retrofit): ApiTaskListService {
         val authApi = retrofit.create(TaskListApi::class.java)
         return ApiTaskListService(authApi)
@@ -43,5 +47,11 @@ class ApiModule {
     fun providesReportService(retrofit: Retrofit): ApiReportService {
         val reportApi = retrofit.create(ReportApi::class.java)
         return ApiReportService(reportApi)
+    }
+    @Provides
+    @Singleton
+    fun providesWeatherService(retrofit: Retrofit): ApiWeatherService {
+        val weatherApi = retrofit.create(WeatherApi::class.java)
+        return ApiWeatherService(weatherApi)
     }
 }
